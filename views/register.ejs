@@ -1,18 +1,41 @@
-<h1>Registerr</h1>
-<form action="/users/register" method="POST">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <button type="submit">Register</button>
-</form>
-
-<a href="/users/login">Login</a>
+<!DOCTYPE html>
+<html>
+    <%- include('./partials/head') %>
+    <body>
+        <div class="content">
+            <h1>REGISTER</h1>
+            <form action="/users/register" method="POST" class="w-full max-w-lg">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
+                      Name
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="name" type="text" name="name" placeholder="Your Name" required>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+                      Email
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" name="email" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                      Password
+                    </label>
+                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" name="password" placeholder="******************" required>
+                    <p class="text-gray-600 text-xs italic text-center">Already have an account? <span class="text-gray-900 text-sm not-italic"><a href="/users/login">Login</a></span></p> 
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 cursor-pointer hover:bg-gray-400 shadow-xl" id="submit" type="submit" name="submit" value="Register">
+                    </div>
+                  </div>
+              </form>
+        </div>
+    </body>
+</html>

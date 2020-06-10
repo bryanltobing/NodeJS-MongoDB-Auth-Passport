@@ -31,6 +31,9 @@ app.use(methodOverride('_method'));
 app.use('/', index);
 app.use('/users', user);
 
+app.get('*',(req, res) => {
+    res.render('404');
+});
 
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);
