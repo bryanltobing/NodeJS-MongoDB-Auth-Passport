@@ -5,7 +5,7 @@ const router = express.Router();
 const { auth, notAuth } = require('../middleware/auth');
 
 router.get('/', auth, (req, res) => {
-    res.render('index.ejs', {
+    res.render('index', {
         name : req.user.name,
         id : req.user._id
     });

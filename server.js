@@ -12,7 +12,7 @@ require('./config/db/mongoose');
 const index = require('./routes/index');
 const user = require('./routes/user');
 
-app.set('view-engine', 'ejs');
+app.set('view engine', 'ejs');
 
 app.use(express.urlencoded( { extended : false }));
 app.use(flash());

@@ -12,11 +12,11 @@ const initializePassport = require('../middleware/passport-config');
 initializePassport (passport);
 
 router.get('/login', notAuth, (req, res) => {
-    res.render('login.ejs');
+    res.render('login');
 });
 
 router.get('/register', notAuth,  (req,res) => {
-    res.render('register.ejs');
+    res.render('register');
 });
 
 router.post('/register', notAuth, async (req,res) => {
