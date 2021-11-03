@@ -20,7 +20,7 @@
     "mongoose": "^5.9.18",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "validator": "^13.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
